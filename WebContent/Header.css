@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+
+#banner{
+display:flex;
+border-style:dotted;
+border-color: black;
+
+background-color: navy;
+}
+#head{
+flex-basis: 40%;
+padding-left: 2.5%;
+color: white;
+}
+#menu{
+flex-basis:50%;
+padding-left: 55%;
+padding-top: 2.5%;
+}
+#menu>a{
+padding-left: 10%;
+}
