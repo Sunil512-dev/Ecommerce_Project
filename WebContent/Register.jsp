@@ -25,26 +25,28 @@ padding-top: 5%;
 		
 	<div id="body">
 		<h1 style="color: red;">Registration</h1>
-		<form action="/RegisterServlet" method="post">
+		<form nmae="regForm" action="RegisterServlet" method="post"  onsubmit=" return validate()">
 	
 			<table>
 				<tr>
-					<td><label>full name</label></td>
-					<td><input type="text" value="${param.fullName}"
-						name="fullName"></td>
+					<td><label>User name</label></td>
+					<td><input type="text" value="${param.userName}" name="userName" pattern="[a-zA-Z]{5-15}"></td>
+				<td><span style="color:red">${errorMessages.userNameError}</span>	</td>
 				</tr>
 				<tr>
 					<td><label>email</label></td>
-					<td><input type="email" value="${param.email}" name="email"></td>
+					<td><input type="email" value="${param.email}" name="email" pattern="[a-zA-Z0-9]{1,}+@[a-zA-z]{2,7}+.[a-z]{3,6}"></td>
+					<td><span style="color:red">${errorMessages.emailError}</span>	</td>
 				</tr>
 				<tr>
 					<td><label>Mobile</label></td>
-					<td><input type="tel" value="${param.mobile}" name="mobile"></td>
+					<td><input type="tel" value="${param.mobile}" name="mobile" pattern="[0-9]{10}"></td>
+					<td><span style="color:red">${errorMessages.mobileError}</span></td>
 				</tr>
 				<tr>
 					<td><label>Password</label></td>
-					<td><input type="password" value="${param.password}"
-						name="password"></td>
+					<td><input type="password" value="${param.password}" name="password" pattern="[a-zA-Z0-9]{8}"></td>
+					<td><span style="color:red">${errorMessages.passwordError}</span></td>
 				</tr>
 				
 			</table>

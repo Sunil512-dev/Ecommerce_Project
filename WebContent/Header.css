@@ -5,7 +5,7 @@ display:flex;
 border-style:dotted;
 border-color: black;
 
-background-color: navy;
+background-color:black;
 }
 #head{
 flex-basis: 40%;

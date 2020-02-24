@@ -14,8 +14,10 @@
 			<h1>ECOMMERCE</h1>
 		</div>
 		<div id="menu">
+		<a href="Home.jsp"><button Style="color: red">Home</button></a>
 			<a href="Login.jsp"><button Style="color: red">Login</button></a> <a
 				href="Register.jsp"><button Style="color: red">Register</button></a>
+				
 		</div>
 	</div>
 </body>
