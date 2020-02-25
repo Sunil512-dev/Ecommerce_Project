@@ -1,12 +1,16 @@
+
+
 function validation() {
+
 
 	let elements = document.forms["regForm"].elements;
 	let userName = elements['userName'].value;
 	let email = elements['email'].value;
 	let mobile = elements['mobile'].value;
 	let password = elements['password'].value;
+	
 	if (userName == '' || userName.length == 0) {
-		document.getElementbyId('fullnameerror').innerHTML = 'enter full_name';
+		document.getElementById('fullnameerror').innerHTML = 'enter full_name';
 		return false;
 
 	}
@@ -31,7 +35,7 @@ function loginValidation() {
 	let elements = document.forms["logform"].elements;
 
 	let email = elements['email'].value;
-	let email = elements['password'].value;
+	let password= elements['password'].value;
 	if (email == '' || email.length == 0) {
 		alert("enter  email_address");
 		return false;

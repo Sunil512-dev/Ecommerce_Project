@@ -15,6 +15,9 @@ margin:0;
 padding-bottom: 2%;
 
 }
+#menu{
+padding-right: 15%;
+}
 
  
 </style>

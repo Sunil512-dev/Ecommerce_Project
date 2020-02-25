@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dto.User;
+import service.Service;
 import util.UserValidation;
 
 /**
@@ -42,21 +43,15 @@ public class RegisterServlet extends HttpServlet {
 			request.setAttribute("errorMessages", errorMessages);
 			request.getRequestDispatcher("Register.jsp").forward(request, response);
 		} else {
-
-			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("EcommerceDb");
-			EntityManager entityManager = entityManagerFactory.createEntityManager();
-			EntityTransaction transaction = entityManager.getTransaction();
-			try {
-				transaction.begin();
-				entityManager.persist(user);
-				transaction.commit();
-			} catch (Exception e) {
-				e.printStackTrace();
-				transaction.rollback();
-			}
-		
-			request.getRequestDispatcher("Login.jsp").forward(request, response);
+            Service service=new Service();
+         boolean result  = service.dataBaseConnection(user);
 			
+		if(result) {
+			request.getRequestDispatcher("Login.jsp").forward(request, response);
+		}
+		else {
+			request.getRequestDispatcher("Register.jsp").forward(request, response);
+		}
 
 		}
 
