@@ -9,26 +9,28 @@
 #login{
 padding-top: 5%;
 }
+
+
+}
 </style>
-</head>
-<body>
+</head> 
+<body background="shop.jpg" id="img" >
 
-
-	<form action="LoginServlet" method="post">
-		<%@include file="Header.jsp"%>
+<%@include file="Home.jsp"%>
+	<form  action="LoginServlet" method="post" name="logform" onsubmit="return loginValidation()">
+		
+		
 		<center id="login">
 			<table>
 				<h1 style="color:red;">Login</h1>
 				<tr>
-					<td><label>User name</label></td>
-					<td><input type="text" value="${param.userName}"
-						name="userName"></td>
-					<td><span style="color: red">${errorMessages.userNameError}</span>
-					</td>
+					<td><label>email</label></td>
+					<td><input type="email" value="${param.email}" name="email" pattern="[a-zA-Z0-9]{1,}+@[a-zA-z]{2,7}+.[a-z]{3,6}"></td>
+					<td><span style="color:red">${errorMessages.emailError}</span>	</td>
 				</tr>
 				<tr>
 					<td><label>Password</label></td>
-					<td><input type="password" value="${param.password}"
+					<td><input type="password" value="${param.password}" pattern="[a-zA-Z0-9]{8}" title="enter  valid password"
 						name="password"></td>
 					<td><span style="color: red">${errorMessages.passwordError}</span></td>
 				</tr>
@@ -43,8 +45,8 @@ padding-top: 5%;
 			</table>
 
 		</center>
-	</forM>
-
+	</form>
+    <script type="text/javascript" src="Validation.js"></script>
 
 </body>
 </html>

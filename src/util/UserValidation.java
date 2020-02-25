@@ -10,15 +10,15 @@ public class UserValidation {
 	Map<String, String> mp = new HashMap<String, String>();
 
 	public Map<String, String> validate(User user) {
-		
-		if(user.getUserName().isEmpty()) {
-			  mp.put("userNameError", "enter valid UserName");
-			
+
+		if (user.getUserName().isEmpty()) {
+			mp.put("userNameError", "enter valid UserName");
+
 		}
 		if (user.getEmail().isEmpty()) {
 			mp.put("emailError", "enter email");
 		}
-		if (user.getMobile().isEmpty() || user.getMobile().length()!=10) {
+		if (user.getMobile().isEmpty() || user.getMobile().length() != 10) {
 			mp.put("mobileError", "enter mobile error");
 		}
 		for (char i = 0; i < user.getMobile().length(); i++) {
@@ -28,13 +28,23 @@ public class UserValidation {
 
 			}
 		}
-			
-			if(user.getPassword().isEmpty()) {
-				mp.put("passwordError", "enter valid password again");
-			}
-	
-		
-	
+
+		if (user.getPassword().isEmpty()) {
+			mp.put("passwordError", "enter valid password again");
+		}
+
 		return mp;
+	}
+
+	public Map<String, String> loginValidation(String email, String password) {
+		if (email.isEmpty()) {
+			mp.put("emailError", "enter registered mail");
+		}
+
+		if (password.isEmpty()) {
+			mp.put("passwordError", "enter valid password again");
+		}
+		return mp;
+
 	}
 }

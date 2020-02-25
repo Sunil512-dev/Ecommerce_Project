@@ -6,8 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="Header.css">
+<style>
+*{
+padding:0;
+margin:0;
+}
+#banner{
+padding-bottom: 2%;
+
+}
+
+ 
+</style>
 </head>
-<body>
+<body background="shop.jpg">
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>

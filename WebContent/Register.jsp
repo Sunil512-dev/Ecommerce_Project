@@ -17,21 +17,25 @@ padding-left: 40%;
 padding-top: 5%;
 }
 
+
 </style>
 </head>
-<body>
+<body background="shop.jpg" id="img">
 
 <%@include file="HeadRegister.jsp"%>
 		
 	<div id="body">
 		<h1 style="color: red;">Registration</h1>
-		<form nmae="regForm" action="RegisterServlet" method="post"  onsubmit=" return validate()">
+	
+		<form name="regForm" action="RegisterServlet" method="post"  onsubmit="return validation()">
 	
 			<table>
 				<tr>
 					<td><label>User name</label></td>
-					<td><input type="text" value="${param.userName}" name="userName" pattern="[a-zA-Z]{5-15}"></td>
+					<td><input type="text" value="${param.userName}" name="userName" pattern="[a-zA-Z]{5,15}"></td>
+					<td>	<span id="fullnameerror"></span></td>
 				<td><span style="color:red">${errorMessages.userNameError}</span>	</td>
+			
 				</tr>
 				<tr>
 					<td><label>email</label></td>
@@ -58,6 +62,7 @@ padding-top: 5%;
 				</div>
 
 		</form>
+			<script src="Validation.js"></script>
 	</div>
 </body>
 </html>

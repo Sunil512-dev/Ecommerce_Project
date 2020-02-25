@@ -7,13 +7,13 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="Header.css">
 </head>
-<body>
+<body background="shop1.jsp">
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>
 		</div>
 		<div id="menu">
-		<a href="Header.jsp"><button Style="color: red">Home</button></a>
+		<a href="Home.jsp"><button Style="color: red">Home</button></a>
 			<a href="Login.jsp"><button Style="color: red">Login</button></a>
 			
 		</div>

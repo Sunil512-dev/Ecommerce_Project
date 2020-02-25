@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="META-INF"/>
 	<classpathentry kind="lib" path="C:/Users/Personal/Downloads/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Personal/Downloads/taglibs-standard-compat-1.2.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Personal/Downloads/taglibs-standard-spec-1.2.5.jar"/>
