@@ -47,3 +47,9 @@ function loginValidation() {
 	}
       return true;
 }
+function productValidation(){
+	let elements = document.forms["addproductform"].elements;
+	let productName=elements.['productName'].value;
+	let productPrice=
+	
+}

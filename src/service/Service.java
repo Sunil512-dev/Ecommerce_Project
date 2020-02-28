@@ -8,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import dto.ProductDetails;
 import dto.User;
 
 public class Service {
@@ -24,7 +25,7 @@ public class Service {
 				.createQuery("from User where email=:email and password=:password",User.class);
 		resultset.setParameter("email", email);
 		resultset.setParameter("password", password);
-		//System.out.println(( ((User) resultset).getEmail());
+		
 	 return resultset.getSingleResult();
 		}catch (Exception e) {   
 			e.printStackTrace();
@@ -49,6 +50,26 @@ public class Service {
 			transaction.rollback();
 		}
 		return false;
+		
+	}
+
+	public boolean addProductsIntoDb(ProductDetails pd) {
+		
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("EcommerceDb");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction transaction = entityManager.getTransaction();
+		try {
+			transaction.begin();
+			entityManager.persist(pd);
+			transaction.commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		return false;
+		
+		
 		
 	}
 

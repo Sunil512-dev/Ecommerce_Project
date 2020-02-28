@@ -38,8 +38,9 @@ public class LoginServlet extends HttpServlet {
 			User loginDetails = service.fetchingLogindetails(email, password);
 			if (loginDetails != null) {
 				HttpSession session = request.getSession();
-				System.out.println("login successfully");
-				response.sendRedirect("Home.jsp");
+			 session.setAttribute("loginDetails", loginDetails);
+				response.sendRedirect("ModifyProducts.jsp");
+				
 				
 			} else {
 				System.out.println("login failed");
