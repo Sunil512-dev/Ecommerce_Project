@@ -1,6 +1,7 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -73,4 +74,24 @@ public class Service {
 		
 	}
 
+	public List<ProductDetails> getProducts() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("EcommerceDb");
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+		@SuppressWarnings("unchecked")
+		TypedQuery<ProductDetails> resultset =  em
+				.createQuery("from ProductDetails ",ProductDetails.class);
+		
+		
+		 return resultset.getResultList();
+	
+	}
+		catch (Exception e) {
+		e.printStackTrace();
+		return null;
+		}
+		
+
+}
 }

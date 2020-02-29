@@ -45,7 +45,7 @@ public class AddProductServlet extends HttpServlet {
 			Service service =new Service();
 			boolean productAdded=service.addProductsIntoDb(pd);
 			if(productAdded) {
-				response.sendRedirect("Addproduct.jsp");
+				response.sendRedirect("EditProductsServlet");
 			}
 			else{
 				request.getRequestDispatcher("Addproduct.jsp").forward(request, response);

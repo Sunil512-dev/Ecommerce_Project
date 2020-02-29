@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.mysql.cj.jdbc.Blob;
+
 @Entity
 public class ProductDetails {
 	@Id
@@ -19,6 +21,7 @@ public class ProductDetails {
     private Integer noOfQuantity;
 	@Column(nullable = false, unique = false)
     private String specifications;
+	//private Blob productImage;
     
 	public ProductDetails() {
 		super();

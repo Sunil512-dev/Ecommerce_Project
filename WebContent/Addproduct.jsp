@@ -46,12 +46,20 @@ padding-top: 7%;
 			<td><textarea name="specifications" rows="8" cols="30" ></textarea><td>
 		</tr>
 		<tr>
+			<td><label>Choose Image</label></td>
+			<td><input type="file"  name="chooseImg"  ></td>
+			
+		</tr>
+		<tr>
 
 					<td style="padding-left:45%" ><input type="submit" name=" submit" value="Add Product"
 						style="background-color:infobackground;"></td>
 				</tr>
-		
+			</form>
 		</center>
+	
+		 <script type="text/javascript" src="Validation.js"></script>
+		
 </body>
-</form>
+
 </html>

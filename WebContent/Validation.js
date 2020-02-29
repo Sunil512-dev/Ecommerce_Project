@@ -48,8 +48,31 @@ function loginValidation() {
       return true;
 }
 function productValidation(){
-	let elements = document.forms["addproductform"].elements;
-	let productName=elements.['productName'].value;
-	let productPrice=
 	
+	let elements=document.forms["addproductform"].elements;
+	let productName=elements['productName'].value;
+	let productPrice=elements['productPrice'].value;
+	let noOfQuantity=elements['noOfQuantity'].value;
+	let specifications=elements['specifications'].value;
+	
+	if (productName == '' || productName.length == 0) {
+		alert("enter  productName");
+		return false;
+	}
+	if (productPrice == '' || productPrice.length == 0) {
+		alert("enter  productPrice");
+		return false;
+	}
+	if (noOfQuantity== '' || noOfQuantity.length == 0) {
+		alert("enter  noOfQuantity");
+		return false;
+	}
+	if (specifications == '' || specifications.length == 0) {
+		alert("enter  productPrice");
+		return false;
+	}
+	  return true;
 }
+	
+	
+	

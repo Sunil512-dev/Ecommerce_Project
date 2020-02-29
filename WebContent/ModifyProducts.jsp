@@ -28,7 +28,7 @@ padding-right: 15%;
 		</div>
 		<div id="menu">
 		<a href="Addproduct.jsp"><button Style="color: red">Add Product</button></a>
-			<a href="Editproduct.jsp"><button Style="color: red">Edit product</button></a> <a
+			<a href="EditProductsServlet"><button Style="color: red">Edit product</button></a>  <a
 				href="Deleteproduct.jsp"><button Style="color: red">Delete product</button></a>
 				<a href="LogoutServlet"><button Style="color: red">LogOut</button></a>
 				
