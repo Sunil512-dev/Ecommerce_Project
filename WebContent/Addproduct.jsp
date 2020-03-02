@@ -16,7 +16,7 @@ padding-top: 7%;
 
 <%@include file="ModifyProducts.jsp"%>
 <center id="body">
-<form action="AddProductServlet"  method="post" name="addproductform" onsubmit=" return productValidation()">
+<form action="AddProductServlet"  method="post" name="addproductform" onsubmit=" return productValidation()" enctype="multipart/form-data">
 <h1 style ="color:red">ADD PRODUCT</h1>
 	<table>
 		<tr>
@@ -47,7 +47,7 @@ padding-top: 7%;
 		</tr>
 		<tr>
 			<td><label>Choose Image</label></td>
-			<td><input type="file"  name="chooseImg"  ></td>
+			<td><input type="file"  name="prodimg"  ></td>
 			
 		</tr>
 		<tr>

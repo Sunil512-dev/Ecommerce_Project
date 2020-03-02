@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+<c:set var="prodimages" value="${pageContext.request.contextPath}/images"></c:set>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,7 +18,7 @@ padding:0;
 margin:0;
 }
 #table{
-padding-left: 22%;
+
 padding-top: 5%;
 }
 #banner{
@@ -25,7 +30,7 @@ padding-right: 15%;
 }
 </style>
 </head>
-<body background="shop.jpg">
+<body >
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>
@@ -40,14 +45,15 @@ padding-right: 15%;
 	     
 	<div id="table">
 		<c:if test="${listOfProducts.size()>0}">
-		    <h1 style="color: red; padding-left: 5%;">List Of Products</h1>
-			<table border="1" style="" :collapse; bordercolor"black">
+		    <h1 style="color: red; padding-left: 10%;">List Of Products</h1>
+			<table border="1" width="100%" :collapse; bordercolor"black">
 				<tr>
 				<th>productId</th>
 					<th>productName</th>
 					<th>productPrice</th>
 					<th>noOfQuantity</th>
 					<th>specifications</th>
+					<th>ProductImage</th>
 					<th>edit</th>
 				</tr>
 				<c:forEach var="Products" items="${listOfProducts}">
@@ -57,6 +63,7 @@ padding-right: 15%;
 						<td>${Products.productPrice}</td>
 						<td>${Products.noOfQuantity}</td>
 						<td>${Products.specifications}</td>
+						<td><img width="250" height="250"  src="${prodimages}/${Products.productId}.jpg"/></td>
 						<td><a href="editDetails?id=${products.productId}"><button style="color: red;">Edit</button></a>
 					</tr>
 				</c:forEach>
