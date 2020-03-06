@@ -81,7 +81,7 @@ public class AddProductServlet extends HttpServlet {
 			} else {
 				request.getRequestDispatcher("Addproduct.jsp").forward(request, response);
 
-			}
+			} 
 
 		}
 

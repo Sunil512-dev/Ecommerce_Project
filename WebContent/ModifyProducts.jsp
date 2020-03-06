@@ -21,7 +21,7 @@ padding-right: 15%;
 }
 </style>
 </head>
-<body background="shop.jpg">
+<body background="images/shop.jpg">
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>
@@ -29,7 +29,7 @@ padding-right: 15%;
 		<div id="menu">
 		<a href="Addproduct.jsp"><button Style="color: red">Add Product</button></a>
 			<a href="EditProductsServlet"><button Style="color: red">Edit product</button></a>  <a
-				href="Deleteproduct.jsp"><button Style="color: red">Delete product</button></a>
+				href="EditProductsServlet"><button Style="color: red">Delete product</button></a>
 				<a href="LogoutServlet"><button Style="color: red">LogOut</button></a>
 				
 		</div>

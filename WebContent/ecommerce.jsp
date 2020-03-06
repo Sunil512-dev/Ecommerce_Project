@@ -11,7 +11,7 @@
 <table border="0"  width="100% " height="5%" bgcolor="#2874F0">
 
 <tr>
-<td><img src="ecommercelogo.png" height="50px"></td>
+<td><img src="images/ecommercelogo.png" height="50px"></td>
 <td><input type="text" placeholder="search products here" ></td>
 <th><a href="Login.jsp"><button Style="color: red">Login</button></a><th>
  <th><a href="Register.jsp"><button Style="color: red">Register</button></a><th>
@@ -27,24 +27,25 @@
 <th width="12.5%">house & furniture</th>
 </tr>
 </table>
-<img src="offer.jpg" width="100%" height="1%">
+<!-- <img src="images/offer.jpg" width="100%" height="1%"> -->
+<iframe src="images/iPhone11.mp4" width="100%" height="300%"></iframe>
 <br><br>
 <table border="0"  width="100% " height="10%" bgcolor="white">
 <tr>
 <td colspan= "5"><h2>Iphones</h2><hr></td>
 </tr>
 <tr>
-<th><img width="75%"  src="iphone7.jpg"></th>
-<th><img width="75%" src="iphone8.jpg"></th>
-<th><img  width="75%" src="iphonex.jpg"></th>
-<th><img  width="75%" src="iphonex.jpg"></th>
-<th><img  width="75%" src="iphonex.jpg"></th>
+<th><img width="75%"  src="images/iphone7.jpg"></th>
+<th><img width="75%" src="images/iphone8.jpg"></th>
+<th><img  width="75%" src="images/iphonex.jpg"></th>
+<th><img  width="75%" src="images/iphonex.jpg"></th>
+<th><img  width="75%" src="images/iphonex.jpg"></th>
 </tr>
-<th><img width="15%"  >iphone7</th>
-<th><img width="15%" >iphone8</th>
-<th><img  width="15%" >iphonex</th>
-<th><img  width="15%">iphonex</th>
-<th><img  width="15%">iphonex</th>
+<th><img width="15%"  >images/iphone7</th>
+<th><img width="15%" >images/iphone8</th>
+<th><img  width="15%" >images/iphonex</th>
+<th><img  width="15%">images/iphonex</th>
+<th><img  width="15%">images/iphonex</th>
 <tr>
 
 </tr>

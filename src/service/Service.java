@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import dto.ProductDetails;
@@ -94,4 +95,66 @@ public class Service {
 		
 
 }
+
+	public ProductDetails getProductsById(Integer productId) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("EcommerceDb");
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+		@SuppressWarnings("unchecked")
+		TypedQuery<ProductDetails> resultset =  em
+				.createQuery("from productDetails where productId=:productId",ProductDetails.class);
+		resultset.setParameter("productId", productId);
+	 return resultset.getSingleResult();
+		}catch (Exception e) {   
+			e.printStackTrace();
+			return null;
+			
+		}
+		
+	}
+
+	public boolean updateProductDetails(ProductDetails pd) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("EcommerceDb");
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+		@SuppressWarnings("unchecked")
+		Query resultset =  em
+				.createQuery("update productDetails set productId=:productId,productName=:productName,productPrice=:productPrice,"
+						+ "noOfQuantity=:noOfQuantity,specifications=:specifications where productId=:productId",ProductDetails.class);
+		resultset.setParameter("productId",pd.getProductId());
+		resultset.setParameter("productName", pd.getProductName());
+		resultset.setParameter("productPrice", pd.getProductPrice());
+		resultset.setParameter("noOfQuantity", pd.getNoOfQuantity());
+		resultset.setParameter("specifications", pd.getSpecifications());
+		resultset.setParameter("productId",pd.getProductId());
+		resultset.executeUpdate();
+	return true;
+		}catch (Exception e) {   
+			e.printStackTrace();
+		return false;
+			
+		}
+		
+		
+	}
+
+	public boolean deleteProductDetails(Integer productId) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("EcommerceDb");
+		EntityManager em = emf.createEntityManager();
+		
+		try {
+		@SuppressWarnings("unchecked")
+		Query qr =  em
+				.createQuery(" delete from productDetails where productId=:productId",ProductDetails.class);
+		qr.setParameter("productId", productId);
+	 return true;
+		}catch (Exception e) {   
+			e.printStackTrace();
+			return false;
+			
+		}
+		
+	}
 }

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import dto.User;
 import service.Service;
+import util.MailUtility;
 import util.UserValidation;
 
 /**
@@ -37,6 +38,8 @@ public class LoginServlet extends HttpServlet {
 			Service service = new Service();
 			User loginDetails = service.fetchingLogindetails(email, password);
 			if (loginDetails != null) {
+				MailUtility mail=new MailUtility();
+				mail.sendMail2(email, email);
 				HttpSession session = request.getSession();
 			 session.setAttribute("loginDetails", loginDetails);
 				response.sendRedirect("ModifyProducts.jsp");

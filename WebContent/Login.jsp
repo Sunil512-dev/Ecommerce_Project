@@ -14,7 +14,7 @@ padding-top: 5%;
 }
 </style>
 </head> 
-<body background="shop.jpg" id="img" >
+<body background="images/shop.jpg" id="img" >
 
 <%@include file="Home.jsp"%>
 	<form  action="LoginServlet" method="post" name="logform" onsubmit="return loginValidation()">

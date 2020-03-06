@@ -17,7 +17,7 @@ padding-bottom: 2%;
 }
 </style>
 </head>
-<body background="shop1.jsp">
+<body background="images/shop1.jsp">
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>

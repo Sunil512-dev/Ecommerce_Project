@@ -22,7 +22,7 @@ padding-right: 15%;
  
 </style>
 </head>
-<body background="shop.jpg">
+<body background="images/shop.jpg">
 <div id="banner">
 		<div id="head">
 			<h1>ECOMMERCE</h1>

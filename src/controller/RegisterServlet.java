@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dto.User;
 import service.Service;
+import util.MailUtility;
 import util.UserValidation;
 
 /**
@@ -47,6 +48,8 @@ public class RegisterServlet extends HttpServlet {
          boolean result  = service.dataBaseConnection(user);
 			
 		if(result) {
+		MailUtility mail=new MailUtility();
+		mail.sendMail(userName, email);
 			request.getRequestDispatcher("Login.jsp").forward(request, response);
 		}
 		else {

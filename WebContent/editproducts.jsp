@@ -45,7 +45,7 @@ padding-right: 15%;
 	     
 	<div id="table">
 		<c:if test="${listOfProducts.size()>0}">
-		    <h1 style="color: red; padding-left: 10%;">List Of Products</h1>
+		    <h1 style="color: red; padding-left: 45%;">List Of Products</h1>
 			<table border="1" width="100%" :collapse; bordercolor"black">
 				<tr>
 				<th>productId</th>
@@ -55,6 +55,8 @@ padding-right: 15%;
 					<th>specifications</th>
 					<th>ProductImage</th>
 					<th>edit</th>
+					<th>delete</th>
+					
 				</tr>
 				<c:forEach var="Products" items="${listOfProducts}">
 					<tr>
@@ -64,7 +66,8 @@ padding-right: 15%;
 						<td>${Products.noOfQuantity}</td>
 						<td>${Products.specifications}</td>
 						<td><img width="250" height="250"  src="${prodimages}/${Products.productId}.jpg"/></td>
-						<td><a href="editDetails?id=${products.productId}"><button style="color: red;">Edit</button></a>
+						<td><a href="ModifyProductDetails?id=${Products.productId}"><button style="color: red;">Edit</button></a>
+					  <td><a href="EditProductsServlet"><button Style="color: red">Delete product</button></a>
 					</tr>
 				</c:forEach>
 			</table>
@@ -74,4 +77,4 @@ padding-right: 15%;
 	
 	                        
 </body>
-</html>
+</html>  
