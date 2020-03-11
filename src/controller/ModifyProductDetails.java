@@ -32,7 +32,7 @@ public class ModifyProductDetails extends HttpServlet {
 			
 		}
 		else {
-			response.getWriter().print("some Internal error");
+			response.getWriter().print("some Internal error"); 
 		}
 		
 	}

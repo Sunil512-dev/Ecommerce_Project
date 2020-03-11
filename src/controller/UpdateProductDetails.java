@@ -16,10 +16,18 @@ import util.ProductsValidation;
 @WebServlet("/UpdateProductDetails")
 public class UpdateProductDetails extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String id = request.getParameter("productId");
+		Integer productId = null;
+		try {
+			productId = Integer.parseInt(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		String productName = request.getParameter("productName");
 		String Price = request.getParameter("productPrice");
 		Double productPrice = Double.valueOf(Price);
@@ -28,6 +36,7 @@ public class UpdateProductDetails extends HttpServlet {
 		String specifications = request.getParameter("specifications");
 		System.out.println(specifications);
 		ProductDetails pd = new ProductDetails();
+		pd.setProductId(productId);
 		pd.setProductName(productName);
 		pd.setProductPrice(productPrice);
 		pd.setNoOfQuantity(noOfQuantity);
@@ -41,15 +50,15 @@ public class UpdateProductDetails extends HttpServlet {
 		} else {
 
 			Service service = new Service();
-			
-			boolean updated=service.updateProductDetails(pd);
-			if(updated) {
+
+			boolean updated = service.updateProductDetails(pd);
+			if (updated) {
+				response.sendRedirect("EditProductsServlet");
 				response.getWriter().print("Updated Successfully");
-			}
-			else {
+			} else {
 				request.getRequestDispatcher("updateproductdetails.jsp").forward(request, response);
 			}
-	}
+		}
 	}
 
 }

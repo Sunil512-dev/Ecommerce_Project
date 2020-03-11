@@ -67,7 +67,7 @@ padding-right: 15%;
 						<td>${Products.specifications}</td>
 						<td><img width="250" height="250"  src="${prodimages}/${Products.productId}.jpg"/></td>
 						<td><a href="ModifyProductDetails?id=${Products.productId}"><button style="color: red;">Edit</button></a>
-					  <td><a href="EditProductsServlet"><button Style="color: red">Delete product</button></a>
+					  <td><a href="DeleteProductDetails?id=${Products.productId}"><button Style="color: red">Delete product</button></a>
 					</tr>
 				</c:forEach>
 			</table>

@@ -21,11 +21,11 @@
 				</tr>
 				
 					<tr>
-					  <td><input type="text" value="${productDetails.productId}"></td>
-						<td><input type="text" value="${productDetails.productName}"></td>
-						<td><input type="text" value="${productDetails.productPrice}"></td>
-						<td><input type="text" value="${productDetails.noOfQuantity}"></td>
-						<td><input type="text" value="${productDetails.specifications}"></td>
+					  <td><input type="text" name="productId" value="${productDetails.productId}"></td>
+						<td><input type="text" name="productName" value="${productDetails.productName}"></td>
+						<td><input type="text" name="productPrice" value="${productDetails.productPrice}"></td>
+						<td><input type="text" name="noOfQuantity" value="${productDetails.noOfQuantity}"></td>
+						<td><input type="text" name="specifications" value="${productDetails.specifications}"></td>
 						<td><img width="250" height="250"  src="${prodimages}/${Products.productId}.jpg"/></td>
 	          <td><input type="submit" value="update"></td>
 					</tr>

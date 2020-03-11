@@ -24,6 +24,7 @@ public class DeleteProductDetails extends HttpServlet {
 	Service sc=new Service();
 	boolean deleted=sc.deleteProductDetails(productId);
 	if(deleted) {
+		response.sendRedirect("EditProductsServlet");
 		response.getWriter().print("product is Deleted ");
 		
 	}
